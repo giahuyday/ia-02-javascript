@@ -1,7 +1,7 @@
 let operator = '';
 
-function setMath(operator) {
-    operator = operator.value;
+function setMath(operation) {
+    operator = operation.value;
 }
 
 function calculate() {
