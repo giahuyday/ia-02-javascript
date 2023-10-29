@@ -1,11 +1,12 @@
 let operator = '';
 
-function setMath(name) {
-    operator = name.value;
+function setMath(operator) {
+    operator = operator.value;
 }
 
 function calculate() {
     const resultElement = document.getElementById('result');
+    
     const number1Field = document.getElementById('number1');
     const number2Field = document.getElementById('number2');
 
@@ -13,8 +14,8 @@ function calculate() {
     const number2 = parseFloat(number2Field.value);
 
     if (isNaN(number1) || isNaN(number2)) {
-        window.alert("Vui lòng nhập số thực hơp lệ và đủ 2 số!")
-        resultElement.value = "Vui lòng nhập số thực hơp lệ và đủ số!"
+        window.alert("Vui lòng nhập số thực hơp lệ và đủ 2 số")
+        resultElement.value = 'Vui lòng nhập số hợp lệ.';
         return;
     }
     console.log(operator)
@@ -37,7 +38,7 @@ function calculate() {
             }
             break;
         default:
-            window.alert("Vui lòng chọn phép toán!")
-            resultElement.value = 'Vui lòng chọn phép toán.';
+            window.alert("Vui lòng chọn phép toán bạn muốn thực hiện!")
+            resultElement.value = 'Vui lòng chọn phép toán bạn muốn thực hiện.';
     }
 }
